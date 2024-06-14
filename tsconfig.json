@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "module": "ESNext",
+    "target": "ESNext",
+    "declaration": true,
+    "declarationDir": "./dist/types",
+    "moduleResolution": "node",
+    "esModuleInterop": true
+
+  },
+
+  "include": ["src/**/*.ts","src/**/*.tsx"],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.css",
+    "**/*.less"
+  ]
+}
