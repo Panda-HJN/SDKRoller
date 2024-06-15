@@ -1,14 +1,26 @@
-import "./styles/global.less"
-type Goods = {
-  price: number;
-  available: 1 | 0;
-};
-interface Log {
-  type: 0 | 1 | 2 | 3;
-  items: Goods[];
+import "./styles/styles";
+import {tax} from "./a";
+
+interface Good {
+    price: number;
+    edible: 0 | 1;
 }
-export  function main(log: Log) {
-  if (!log.type) return [];
-  return log.items;
+
+interface GoodsData {
+    type: 0 | 1 | 2 | 3;
+    items: Good[   ];
 }
-export const USER_CONFIG = 9527
+
+export function getAllEdibleGoods(goods: GoodsData) {
+    if (!goods.type) return [];
+    return goods.items
+        .filter((g) => g.edible)
+        .map((g) => {
+            return {
+                ...g,
+                price: g.price + tax,
+            };
+        });
+}
+
+export const USER_CONFIG = 9527;

@@ -1,3 +1,1 @@
-export const bb = {
-    a:123213
-}
+export const tax = 15;

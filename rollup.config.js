@@ -3,8 +3,7 @@ import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import terser from '@rollup/plugin-terser';
 import postcss from 'rollup-plugin-postcss';
-import url from 'rollup-plugin-url';
-import replace from '@rollup/plugin-replace';
+import url from '@rollup/plugin-url';
 export default {
     input: 'src/index.ts',
     output: [
